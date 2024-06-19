@@ -13,21 +13,12 @@ RedBlackTree Quiz is an interactive text-based application where players engage 
 - File Management
 - Game Development
 
-## Project Structure
+## Features
 
-```
-
-.
-├── Makefile
-├── bin
-├── src
-│ ├── RBTreeQuiz.java
-│ ├── RBTreeTests.java
-│ ├── RBTrees.java
-│ └── SortedCollectionInterface.java
-└── out
-
-```
+- **Interactive Quiz Format**: Engage in a series of Red-Black Tree insertion and removal questions.
+- **Text-Based Interaction**: Answer questions by editing a text file (`results.txt`), simulating real Red-Black Tree manipulations.
+- **Visualization Aid**: The Red-Black Tree is displayed in a clear, hierarchical format with color indications.
+- **Feedback and Evaluation**: Receive immediate feedback on your answers after submission.
 
 ## Requirements
 
@@ -52,6 +43,12 @@ To run the application, use:
 make run
 ```
 
+Or directly using:
+
+```sh
+java -jar out/RBTreeQuiz.jar
+```
+
 ### Running the Tests
 
 To run the tests, use:
@@ -68,17 +65,30 @@ To clean up the compiled files and the generated JAR file, use:
 make clean
 ```
 
-## Makefile
+## How to Use the Application
 
-The provided `Makefile` includes the following targets:
-
-- `all`: Compiles the Java files and builds the JAR file.
-- `run`: Runs the application.
-- `runTests`: Runs the tests using JUnit 5.
-- `clean`: Cleans up the compiled files and the generated JAR file.
+1. Run the application using the provided commands.
+2. You will be prompted with a series of questions about Red-Black Tree insertions and removals.
+3. Answer the questions by editing the `results.txt` file that will be created in the application's directory.
+4. The Red-Black Tree in the file is denoted in the following format:
+   ```
+   \-- parent (0/1)
+        |-- lChild (0/1)
+        |   |-- llChild (0/1)
+        |   \-- lrChild (0/1)
+        \-- rChild (0/1)
+   ```
+   Where `0/1` indicate the colors of the nodes (`0` is red, `1` is black).
+5. It is recommended to use `vim`, `neovim`, or any other text editor of your liking. Be sure to reload the file if prompted to.
+6. Press submit only after saving your result in the file.
+7. Follow the on-screen instructions to continue or quit the quiz.
 
 ## Contact
 
 For any queries or support, feel free to reach out to the project maintainers.
 
 Enjoy enhancing your understanding of Red-Black Trees through the RedBlackTree Quiz!
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
